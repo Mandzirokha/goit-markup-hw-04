@@ -33,7 +33,7 @@
           <li class="nav-item contact-item">
             <a class="link contact-info-header" href="tel:+380961111111">
               <svg class="contact-icon">
-                <use href="./images/studio/icons.svg#icon-smartphon" width="10" height="16"></use>
+                <use href="./images/studio/icons.svg#icon-smartphone" width="10" height="16"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -48,7 +48,16 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="btn" type="button">Заказать услугу</button>
+        <button class="btn" type="button" data-modal-open>Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-close-btn" data-modal-close>
+              <svg class="modal-icon-svg">
+                <use href="./images/studio/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
       <!--Особенности-->
       <section class="section feature-section">
@@ -100,13 +109,22 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="flexbox list">
             <li class="img-card">
-              <img class="img" src="./images/studio/box_1.jpg" alt="Написание программы" width="370" />
+              <div class="thumb">
+                <img class="img" src="./images/studio/box_1.jpg" alt="Написание программы" width="370" />
+              </div>
+              <p class="label">Десктопные приложения</p>
             </li>
             <li class="img-card">
-              <img src="./images/studio/box_2.jpg" alt="Создание макета" width="370" />
+              <div class="thumb">
+                <img src="./images/studio/box_2.jpg" alt="Создание макета" width="370" />
+              </div>
+              <p class="label">Мобильные приложения</p>
             </li>
             <li class="img-card">
-              <img src="images/studio/box_3.jpg" alt="Создание дизайна" width="370" />
+              <div class="thumb">
+                <img src="images/studio/box_3.jpg" alt="Создание дизайна" width="370" />
+              </div>
+              <p class="label">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -386,5 +404,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
